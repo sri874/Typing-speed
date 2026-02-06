@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test - Hindi | English | Tamil</title>
+    <meta name="description" content="Test your typing speed in Hindi, English, or Tamil. Practice typing and improve your WPM with our multilingual typing test.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>⌨️ Typing Speed Test</h1>
+            <p class="subtitle">Test your typing skills in multiple languages</p>
+        </header>
+
+        <div class="language-selector">
+            <label for="language">Select Language:</label>
+            <div class="select-wrapper">
+                <select id="language">
+                    <option value="english">🇬🇧 English</option>
+                    <option value="hindi">🇮🇳 हिंदी (Hindi)</option>
+                    <option value="tamil">🇮🇳 தமிழ் (Tamil)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-value" id="timer">60</div>
+                <div class="stat-label">Seconds</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🚀</div>
+                <div class="stat-value" id="wpm">0</div>
+                <div class="stat-label">WPM</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value" id="accuracy">100</div>
+                <div class="stat-label">Accuracy %</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✍️</div>
+                <div class="stat-value" id="characters">0</div>
+                <div class="stat-label">Characters</div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <div class="text-display" id="textDisplay">
+                <p>Click "Start Test" to begin typing...</p>
+            </div>
+
+            <textarea 
+                id="inputField" 
+                placeholder="Start typing here when the test begins..."
+                disabled
+            ></textarea>
+
+            <div class="button-container">
+                <button id="startBtn" class="btn btn-primary">
+                    <span>🚀</span> Start Test
+                </button>
+                <button id="resetBtn" class="btn btn-secondary">
+                    <span>🔄</span> Reset
+                </button>
+            </div>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <h2>🏆 Test Complete!</h2>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <span class="result-value" id="finalWpm">0</span>
+                    <span class="result-label">Words Per Minute</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-value" id="finalAccuracy">0</span>
+                    <span class="result-label">Accuracy %</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-value" id="finalChars">0</span>
+                    <span class="result-label">Characters Typed</span>
+                </div>
+            </div>
+            <button id="tryAgainBtn" class="btn btn-primary">
+                <span>🔁</span> Try Again
+            </button>
+        </div>
+
+        <footer>
+            <p>Practice typing in Hindi, English, and Tamil to improve your speed!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
